@@ -1,0 +1,261 @@
+{
+  "project_name": "TRACEPOINT",
+  "project_root": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint",
+  "agent_folder": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\Investigator agent",
+  "created_at": "2026-10-09T15:17:00Z",
+  "total_files": 43,
+  "files": [
+    {
+      "name": "main.py",
+      "relative_path": "backend/app/main.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\app\\main.py",
+      "category": "backend_core"
+    },
+    {
+      "name": "routes.py",
+      "relative_path": "backend/app/api/routes.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\app\\api\\routes.py",
+      "category": "backend_api"
+    },
+    {
+      "name": "comparison_engine.py",
+      "relative_path": "backend/app/core/comparison_engine.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\app\\core\\comparison_engine.py",
+      "category": "backend_core"
+    },
+    {
+      "name": "replay_engine.py",
+      "relative_path": "backend/app/core/replay_engine.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\app\\core\\replay_engine.py",
+      "category": "backend_core"
+    },
+    {
+      "name": "trace_parser.py",
+      "relative_path": "backend/app/core/trace_parser.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\app\\core\\trace_parser.py",
+      "category": "backend_core"
+    },
+    {
+      "name": "ai_assistant.py",
+      "relative_path": "backend/app/core/ai_assistant.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\app\\core\\ai_assistant.py",
+      "category": "backend_core"
+    },
+    {
+      "name": "trace_schemas.py",
+      "relative_path": "backend/app/schemas/trace_schemas.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\app\\schemas\\trace_schemas.py",
+      "category": "backend_schemas"
+    },
+    {
+      "name": "database.py",
+      "relative_path": "backend/app/db/database.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\app\\db\\database.py",
+      "category": "backend_db"
+    },
+    {
+      "name": "repository.py",
+      "relative_path": "backend/app/db/repository.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\app\\db\\repository.py",
+      "category": "backend_db"
+    },
+    {
+      "name": "successful_order.json",
+      "relative_path": "backend/sample-data/successful_order.json",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\sample-data\\successful_order.json",
+      "category": "sample_data"
+    },
+    {
+      "name": "failed_order.json",
+      "relative_path": "backend/sample-data/failed_order.json",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\sample-data\\failed_order.json",
+      "category": "sample_data"
+    },
+    {
+      "name": "changed_tool_response.json",
+      "relative_path": "backend/sample-data/changed_tool_response.json",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\sample-data\\changed_tool_response.json",
+      "category": "sample_data"
+    },
+    {
+      "name": "failed_order.jsonl",
+      "relative_path": "backend/sample-data/failed_order.jsonl",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\sample-data\\failed_order.jsonl",
+      "category": "sample_data"
+    },
+    {
+      "name": "test_tracepoint.py",
+      "relative_path": "backend/tests/test_tracepoint.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\tests\\test_tracepoint.py",
+      "category": "tests"
+    },
+    {
+      "name": "requirements.txt",
+      "relative_path": "backend/requirements.txt",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\backend\\requirements.txt",
+      "category": "config"
+    },
+    {
+      "name": "App.tsx",
+      "relative_path": "frontend/src/App.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\App.tsx",
+      "category": "frontend_source"
+    },
+    {
+      "name": "main.tsx",
+      "relative_path": "frontend/src/main.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\main.tsx",
+      "category": "frontend_source"
+    },
+    {
+      "name": "index.css",
+      "relative_path": "frontend/src/index.css",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\index.css",
+      "category": "frontend_style"
+    },
+    {
+      "name": "api.ts",
+      "relative_path": "frontend/src/services/api.ts",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\services\\api.ts",
+      "category": "frontend_service"
+    },
+    {
+      "name": "index.ts",
+      "relative_path": "frontend/src/types/index.ts",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\types\\index.ts",
+      "category": "frontend_types"
+    },
+    {
+      "name": "Layout.tsx",
+      "relative_path": "frontend/src/components/Layout.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\components\\Layout.tsx",
+      "category": "frontend_component"
+    },
+    {
+      "name": "DiffBadge.tsx",
+      "relative_path": "frontend/src/components/DiffBadge.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\components\\DiffBadge.tsx",
+      "category": "frontend_component"
+    },
+    {
+      "name": "EventDetailDrawer.tsx",
+      "relative_path": "frontend/src/components/EventDetailDrawer.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\components\\EventDetailDrawer.tsx",
+      "category": "frontend_component"
+    },
+    {
+      "name": "OverviewPage.tsx",
+      "relative_path": "frontend/src/pages/OverviewPage.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\pages\\OverviewPage.tsx",
+      "category": "frontend_page"
+    },
+    {
+      "name": "NewInvestigationPage.tsx",
+      "relative_path": "frontend/src/pages/NewInvestigationPage.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\pages\\NewInvestigationPage.tsx",
+      "category": "frontend_page"
+    },
+    {
+      "name": "TraceExplorerPage.tsx",
+      "relative_path": "frontend/src/pages/TraceExplorerPage.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\pages\\TraceExplorerPage.tsx",
+      "category": "frontend_page"
+    },
+    {
+      "name": "ComparePage.tsx",
+      "relative_path": "frontend/src/pages/ComparePage.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\pages\\ComparePage.tsx",
+      "category": "frontend_page"
+    },
+    {
+      "name": "ReplayLabPage.tsx",
+      "relative_path": "frontend/src/pages/ReplayLabPage.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\pages\\ReplayLabPage.tsx",
+      "category": "frontend_page"
+    },
+    {
+      "name": "FindingsPage.tsx",
+      "relative_path": "frontend/src/pages/FindingsPage.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\pages\\FindingsPage.tsx",
+      "category": "frontend_page"
+    },
+    {
+      "name": "SettingsPage.tsx",
+      "relative_path": "frontend/src/pages/SettingsPage.tsx",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\src\\pages\\SettingsPage.tsx",
+      "category": "frontend_page"
+    },
+    {
+      "name": "index.html",
+      "relative_path": "frontend/index.html",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\index.html",
+      "category": "frontend_config"
+    },
+    {
+      "name": "package.json",
+      "relative_path": "frontend/package.json",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\package.json",
+      "category": "frontend_config"
+    },
+    {
+      "name": "vite.config.ts",
+      "relative_path": "frontend/vite.config.ts",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\vite.config.ts",
+      "category": "frontend_config"
+    },
+    {
+      "name": "tailwind.config.js",
+      "relative_path": "frontend/tailwind.config.js",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\tailwind.config.js",
+      "category": "frontend_config"
+    },
+    {
+      "name": "postcss.config.js",
+      "relative_path": "frontend/postcss.config.js",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\postcss.config.js",
+      "category": "frontend_config"
+    },
+    {
+      "name": "tsconfig.json",
+      "relative_path": "frontend/tsconfig.json",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\tsconfig.json",
+      "category": "frontend_config"
+    },
+    {
+      "name": "tsconfig.app.json",
+      "relative_path": "frontend/tsconfig.app.json",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\tsconfig.app.json",
+      "category": "frontend_config"
+    },
+    {
+      "name": "tsconfig.node.json",
+      "relative_path": "frontend/tsconfig.node.json",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\frontend\\tsconfig.node.json",
+      "category": "frontend_config"
+    },
+    {
+      "name": "README.md",
+      "relative_path": "README.md",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\antigravity-ide\\scratch\\tracepoint\\README.md",
+      "category": "documentation"
+    },
+    {
+      "name": ".env.example",
+      "relative_path": ".env.example",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\.env.example",
+      "category": "config"
+    },
+    {
+      "name": "verify_demo.py",
+      "relative_path": "verify_demo.py",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\verify_demo.py",
+      "category": "verification_script"
+    },
+    {
+      "name": "architecture.md",
+      "relative_path": "docs/architecture.md",
+      "absolute_path": "C:\\Users\\MUKESH\\.gemini\\antigravity-ide\\scratch\\tracepoint\\docs\\architecture.md",
+      "category": "documentation"
+    }
+  ]
+}

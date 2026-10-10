@@ -1,0 +1,125 @@
+[
+  {
+    "trace_id": "trace_success_001",
+    "agent_name": "shopping_agent",
+    "run_id": "run_golden_01",
+    "event_id": 1,
+    "timestamp": "2026-10-01T10:00:01Z",
+    "event_type": "tool_response",
+    "step_name": "payment_check",
+    "tool_name": "payment_api",
+    "input": {
+      "order_id": "ORD-101",
+      "amount": 299.99,
+      "currency": "USD"
+    },
+    "output": {
+      "status": "SUCCESS",
+      "transaction_id": "TXN-99812",
+      "auth_code": "AUTH-441"
+    },
+    "state_before": {
+      "order_stage": "CHECKOUT",
+      "payment": "PENDING",
+      "inventory_reserved": true
+    },
+    "state_after": {
+      "order_stage": "PAYMENT_VERIFIED",
+      "payment": "PAID",
+      "inventory_reserved": true
+    },
+    "status": "success",
+    "error": null,
+    "duration_ms": 142
+  },
+  {
+    "trace_id": "trace_success_001",
+    "agent_name": "shopping_agent",
+    "run_id": "run_golden_01",
+    "event_id": 2,
+    "timestamp": "2026-10-01T10:00:03Z",
+    "event_type": "tool_response",
+    "step_name": "create_order",
+    "tool_name": "order_service",
+    "input": {
+      "order_id": "ORD-101",
+      "customer_id": "CUST-881",
+      "items": [{"sku": "SKU-PRO-01", "qty": 1}],
+      "payment_ref": "TXN-99812"
+    },
+    "output": {
+      "status": "SUCCESS",
+      "order_number": "ORD-101",
+      "confirmation_token": "TOK-CONF-987"
+    },
+    "state_before": {
+      "order_stage": "PAYMENT_VERIFIED",
+      "payment": "PAID",
+      "order_status": "UNCREATED"
+    },
+    "state_after": {
+      "order_stage": "ORDER_CREATED",
+      "payment": "PAID",
+      "order_status": "CREATED"
+    },
+    "status": "success",
+    "error": null,
+    "duration_ms": 310
+  },
+  {
+    "trace_id": "trace_success_001",
+    "agent_name": "shopping_agent",
+    "run_id": "run_golden_01",
+    "event_id": 3,
+    "timestamp": "2026-10-01T10:00:04Z",
+    "event_type": "tool_response",
+    "step_name": "order_status",
+    "tool_name": "fulfillment_api",
+    "input": {
+      "order_id": "ORD-101"
+    },
+    "output": {
+      "status": "CONFIRMED",
+      "estimated_delivery": "2026-10-04T18:00:00Z"
+    },
+    "state_before": {
+      "order_stage": "ORDER_CREATED",
+      "order_status": "CREATED"
+    },
+    "state_after": {
+      "order_stage": "FULFILLMENT_CONFIRMED",
+      "order_status": "CONFIRMED"
+    },
+    "status": "success",
+    "error": null,
+    "duration_ms": 195
+  },
+  {
+    "trace_id": "trace_success_001",
+    "agent_name": "shopping_agent",
+    "run_id": "run_golden_01",
+    "event_id": 4,
+    "timestamp": "2026-10-01T10:00:05Z",
+    "event_type": "final_output",
+    "step_name": "final_output",
+    "tool_name": "response_generator",
+    "input": {
+      "order_id": "ORD-101",
+      "fulfillment_status": "CONFIRMED"
+    },
+    "output": {
+      "message": "Your order ORD-101 is confirmed and scheduled for delivery on October 4."
+    },
+    "state_before": {
+      "order_stage": "FULFILLMENT_CONFIRMED",
+      "order_status": "CONFIRMED"
+    },
+    "state_after": {
+      "order_stage": "COMPLETED",
+      "order_status": "CONFIRMED"
+    },
+    "status": "success",
+    "error": null,
+    "duration_ms": 80
+  }
+]

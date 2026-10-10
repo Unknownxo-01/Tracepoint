@@ -1,0 +1,125 @@
+[
+  {
+    "trace_id": "trace_failed_002",
+    "agent_name": "shopping_agent",
+    "run_id": "run_failed_02",
+    "event_id": 1,
+    "timestamp": "2026-10-01T10:15:01Z",
+    "event_type": "tool_response",
+    "step_name": "payment_check",
+    "tool_name": "payment_api",
+    "input": {
+      "order_id": "ORD-101",
+      "amount": 299.99,
+      "currency": "USD"
+    },
+    "output": {
+      "status": "SUCCESS",
+      "transaction_id": "TXN-99812",
+      "auth_code": "AUTH-441"
+    },
+    "state_before": {
+      "order_stage": "CHECKOUT",
+      "payment": "PENDING",
+      "inventory_reserved": true
+    },
+    "state_after": {
+      "order_stage": "PAYMENT_VERIFIED",
+      "payment": "PAID",
+      "inventory_reserved": true
+    },
+    "status": "success",
+    "error": null,
+    "duration_ms": 138
+  },
+  {
+    "trace_id": "trace_failed_002",
+    "agent_name": "shopping_agent",
+    "run_id": "run_failed_02",
+    "event_id": 2,
+    "timestamp": "2026-10-01T10:15:03Z",
+    "event_type": "tool_response",
+    "step_name": "create_order",
+    "tool_name": "order_service",
+    "input": {
+      "order_id": "ORD-101",
+      "customer_id": "CUST-881",
+      "items": [{"sku": "SKU-PRO-01", "qty": 1}],
+      "payment_ref": "TXN-99812"
+    },
+    "output": {
+      "status": "FAILED",
+      "error_code": "ORDER_SVC_TIMEOUT",
+      "detail": "Connection to upstream order-service timed out after 3000ms"
+    },
+    "state_before": {
+      "order_stage": "PAYMENT_VERIFIED",
+      "payment": "PAID",
+      "order_status": "UNCREATED"
+    },
+    "state_after": {
+      "order_stage": "ORDER_CREATION_FAILED",
+      "payment": "PAID",
+      "order_status": "FAILED"
+    },
+    "status": "failure",
+    "error": "Connection to upstream order-service timed out after 3000ms",
+    "duration_ms": 3012
+  },
+  {
+    "trace_id": "trace_failed_002",
+    "agent_name": "shopping_agent",
+    "run_id": "run_failed_02",
+    "event_id": 3,
+    "timestamp": "2026-10-01T10:15:07Z",
+    "event_type": "tool_response",
+    "step_name": "order_status",
+    "tool_name": "fulfillment_api",
+    "input": {
+      "order_id": "ORD-101"
+    },
+    "output": {
+      "status": "NOT_FOUND",
+      "detail": "Record for order ORD-101 not located in fulfillment database"
+    },
+    "state_before": {
+      "order_stage": "ORDER_CREATION_FAILED",
+      "order_status": "FAILED"
+    },
+    "state_after": {
+      "order_stage": "ORDER_STATUS_NOT_FOUND",
+      "order_status": "NOT_FOUND"
+    },
+    "status": "failure",
+    "error": "Order record not found in database",
+    "duration_ms": 112
+  },
+  {
+    "trace_id": "trace_failed_002",
+    "agent_name": "shopping_agent",
+    "run_id": "run_failed_02",
+    "event_id": 4,
+    "timestamp": "2026-10-01T10:15:08Z",
+    "event_type": "final_output",
+    "step_name": "final_output",
+    "tool_name": "response_generator",
+    "input": {
+      "order_id": "ORD-101",
+      "fulfillment_status": "NOT_FOUND"
+    },
+    "output": {
+      "message": "Your order could not be confirmed. A refund inquiry has been logged for payment TXN-99812."
+    },
+    "state_before": {
+      "order_stage": "ORDER_STATUS_NOT_FOUND",
+      "order_status": "NOT_FOUND"
+    },
+    "state_after": {
+      "order_stage": "TERMINATED_FAILURE",
+      "order_status": "FAILED"
+    },
+    "status": "failure",
+    "error": "Order completion halted due to missing order record",
+    "duration_ms": 65
+  }
+]

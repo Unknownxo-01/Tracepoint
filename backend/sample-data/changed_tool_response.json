@@ -1,0 +1,125 @@
+[
+  {
+    "trace_id": "trace_changed_003",
+    "agent_name": "shopping_agent",
+    "run_id": "run_changed_03",
+    "event_id": 1,
+    "timestamp": "2026-10-01T10:30:01Z",
+    "event_type": "tool_response",
+    "step_name": "payment_check",
+    "tool_name": "payment_api",
+    "input": {
+      "order_id": "ORD-101",
+      "amount": 299.99,
+      "currency": "USD"
+    },
+    "output": {
+      "status": "SUCCESS",
+      "transaction_id": "TXN-99812",
+      "auth_code": "AUTH-441"
+    },
+    "state_before": {
+      "order_stage": "CHECKOUT",
+      "payment": "PENDING",
+      "inventory_reserved": true
+    },
+    "state_after": {
+      "order_stage": "PAYMENT_VERIFIED",
+      "payment": "PAID",
+      "inventory_reserved": true
+    },
+    "status": "success",
+    "error": null,
+    "duration_ms": 140
+  },
+  {
+    "trace_id": "trace_changed_003",
+    "agent_name": "shopping_agent",
+    "run_id": "run_changed_03",
+    "event_id": 2,
+    "timestamp": "2026-10-01T10:30:03Z",
+    "event_type": "tool_response",
+    "step_name": "create_order",
+    "tool_name": "order_service",
+    "input": {
+      "order_id": "ORD-101",
+      "customer_id": "CUST-881",
+      "items": [{"sku": "SKU-PRO-01", "qty": 1}],
+      "payment_ref": "TXN-99812"
+    },
+    "output": {
+      "status": "OUT_OF_STOCK",
+      "available_quantity": 0,
+      "backorder_eligible": false
+    },
+    "state_before": {
+      "order_stage": "PAYMENT_VERIFIED",
+      "payment": "PAID",
+      "order_status": "UNCREATED"
+    },
+    "state_after": {
+      "order_stage": "STOCK_EXHAUSTED",
+      "payment": "REFUND_REQUESTED",
+      "order_status": "ABORTED"
+    },
+    "status": "warning",
+    "error": null,
+    "duration_ms": 220
+  },
+  {
+    "trace_id": "trace_changed_003",
+    "agent_name": "shopping_agent",
+    "run_id": "run_changed_03",
+    "event_id": 3,
+    "timestamp": "2026-10-01T10:30:05Z",
+    "event_type": "tool_response",
+    "step_name": "order_status",
+    "tool_name": "fulfillment_api",
+    "input": {
+      "order_id": "ORD-101"
+    },
+    "output": {
+      "status": "CANCELLED_STOCK_DEFICIT",
+      "refund_processed": true
+    },
+    "state_before": {
+      "order_stage": "STOCK_EXHAUSTED",
+      "order_status": "ABORTED"
+    },
+    "state_after": {
+      "order_stage": "REFUND_COMPLETED",
+      "order_status": "CANCELLED"
+    },
+    "status": "warning",
+    "error": null,
+    "duration_ms": 180
+  },
+  {
+    "trace_id": "trace_changed_003",
+    "agent_name": "shopping_agent",
+    "run_id": "run_changed_03",
+    "event_id": 4,
+    "timestamp": "2026-10-01T10:30:06Z",
+    "event_type": "final_output",
+    "step_name": "final_output",
+    "tool_name": "response_generator",
+    "input": {
+      "order_id": "ORD-101",
+      "fulfillment_status": "CANCELLED_STOCK_DEFICIT"
+    },
+    "output": {
+      "message": "Item SKU-PRO-01 is out of stock. Your payment has been refunded to original payment method."
+    },
+    "state_before": {
+      "order_stage": "REFUND_COMPLETED",
+      "order_status": "CANCELLED"
+    },
+    "state_after": {
+      "order_stage": "SESSION_CLOSED",
+      "order_status": "CANCELLED"
+    },
+    "status": "success",
+    "error": null,
+    "duration_ms": 75
+  }
+]
